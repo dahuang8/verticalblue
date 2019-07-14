@@ -5,7 +5,7 @@ title: C++ Multimap
 
 Multimap is an extension to regular map[^1]. It allows multiple values associated with the same key. The right way to access all values associated with the same key is to use `equal_range()`.
 
-```cpp
+~~~cpp
 unordered_multimap<int, string> map{{0, "a"}, {0, "b"}, {1, "c"}, {1, "d"}, {1, "e"}, {2, "f"}};
 auto rtn = map.find(1);
 cout << "found one entry with key " << rtn->first << " holds value " << rtn->second << endl;
@@ -15,7 +15,7 @@ cout << "equal_range:" << endl;
 auto rgn = map.equal_range(1);
 for_each(rgn.first, rgn.second, [](auto &v){cout << "key = " << v.first << ", value = " << v.second << endl;});
 map.emplace(2, "g");
-```
+~~~
 
 Note:
 
