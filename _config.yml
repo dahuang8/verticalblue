@@ -85,4 +85,5 @@ exclude:
   - README.md
   - CNAME
 
-theme: Phlow/feeling-responsive
+# theme: 
+remote_theme: Phlow/feeling-responsive
